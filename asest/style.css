@@ -1,0 +1,382 @@
+/*---Impor-Gogle Font---*/
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Marcellus+SC&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  font-family: 'Poppins', Sans-Serif, 'Marcellus SC', serif, 'Alata', Sans-Serif, "Poetsen One", sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --black: #221F1F;
+  --redmaroon: #B81D24;
+  --red: #E50914;
+  --white: #F5F5F1;
+}
+
+.container-mainTop {
+  width: 100%;
+  height: 27vh;
+  background: var(--white);
+  border-radius: 0 0 40% 40%;
+  border-bottom: solid 2px var(--redmaroon);
+  overflow: hidden;
+  z-index: 1;
+}
+/* bagian header top */
+.container-mainTop .container-headerTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  background: var(--white);
+  border-radius: 0 0 18px 18px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
+  color: var(--black);
+  z-index: 4;
+}
+/* toggle sidebar animasi Btn */
+.container-headerTop .toggle-sidebarBtn {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+.toggle-sidebarBtn input {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  z-index: 2;
+}
+.toggle-sidebarBtn span {
+  display: block;
+  margin: 3px 0;
+  width: 18px;
+  height: 2.3px;
+  background: var(--black);
+  transition: all 0.5s ease;
+}
+.toggle-sidebarBtn span:nth-child(2) {
+  transform-origin: 0 0;
+}.toggle-sidebarBtn input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translateY(-5.5px) translateX(1.5px);
+}.toggle-sidebarBtn span:nth-child(3) {
+  transform-origin: 10% 0;
+}.toggle-sidebarBtn input:checked ~ span:nth-child(3) {
+  transform: rotate(-45deg) translateY(2.5px) translateX(1.5px);
+}
+/* logo */
+.container-headerTop .logo img {
+  max-width: 35%;
+  height: auto;
+  margin-top: -12%;
+  margin-left: 8px;
+}
+/* bilah message */
+.nav-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 6px;
+}
+.nav-message a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--black);
+}
+.nav-message a .iconLink-message {
+  font-size: 20px;
+  transform: translateY(3px);
+  transition: all .5s ease;
+}
+.nav-message a:hover .iconLink-message {
+  transform: translateY(0);
+}
+.nav-message a .title-message {
+  font-size: 8px;
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: all .5s ease;
+}
+.nav-message a:hover .title-message {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* Sidebar Main Item */
+#container-MainSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 60%;
+  background: var(--redmaroon);
+  border-bottom-right-radius: 20px;
+  padding: 20% 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+  transition: all .5s ease;
+}
+#container-MainSidebar .logoIn-sidebar {
+  letter-spacing: 0.3em;
+  font-size: 15px;
+  color: var(--white);
+  width: 100%;
+  height: 40px;
+  background: var(--black);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+#container-MainSidebar .sidebar-list1 {
+  list-style: none;
+  width: 100%;
+  height: auto;
+  background: var(--white);
+  border-radius: 10px;
+}
+#container-MainSidebar .sidebar-item a {
+  text-decoration: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  transition: all .5s ease;
+}
+#container-MainSidebar .sidebar-item a:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.sidebar-item .iconNext {
+  transition: all .5s ease;
+}
+#container-MainSidebar .sidebar-item a:hover .iconNext {
+  transform: translateX(5px);
+}
+#container-MainSidebar .items-menu {
+  font-size: 12px;
+  font-weight: 400;
+}
+/*Hidden Navbar*/
+aside.sidebarHidden{
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* My Photos */
+.container-main2 {
+  display: flex;
+  justify-content: center;
+}
+.container-main2 .myPhotos {
+  padding-top: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--redmaroon);
+  box-shadow: 3px 2px 0 var(--black);
+  margin-top: 20%;
+  z-index: 3;
+}
+.container-main2 .myPhotos:before {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--black);
+  box-shadow: 3px -2px 0 var(--white);
+  left: 12%;
+  margin-top: -9%;
+}
+.container-main2 .myPhotos img {
+  width: 200px;
+  margin-top: -75px;
+}
+
+/* MAIN 2 */
+/* link dwonload */
+.container-main3 {
+  margin: 20px 0;
+}
+.container-perkenalan article {
+  padding: 0 10px;
+}
+.container-perkenalan article p {
+  font-family: 'Alata', Sans-Serif;
+  color: var(--white);
+  font-size: 8px;
+  font-weight: 400;
+}
+.container-perkenalan article p span {
+  color: var(--redmaroon);
+  background: var(--white);
+}
+.container-perkenalan article h3 {
+  color: var(--white);
+  text-align: left;
+  line-height: 20px;
+  font-family: 'Marcellus SC', serif;
+  letter-spacing: 0.2em;
+}
+/* TOGGLE CV TALK */
+.toggleCvEx {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  opacity: 2;
+}
+.toggleCvEx input {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  z-index: 1;
+}
+.toggleCvEx span {
+  display: block;
+  width: 13px;
+  height: 3px;
+  margin: 4px 0;
+  border-radius: 8px;
+  background: var(--white);
+  transition: all .5s ease;
+}.toggleCvEx span:nth-child(2) {
+  transform: rotate(40deg) translateX(5px) translateY(3px);
+}.toggleCvEx span:nth-child(3) {
+  transform: rotate(-40deg) translateX(-5px) translateY(3px);
+}
+
+.toggleCvEx input:checked ~ span:nth-child(2) {
+  transform: rotate(0deg) translateX(3px) translateY(5px);
+}
+.toggleCvEx input:checked ~ span:nth-child(3) {
+  transform: rotate(0deg) translateX(-3px) translateY(5px);
+}
+/* CV END LET'S TALK */
+#continer-cvEx {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(to bottom, var(--black), transparent);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.125);
+  border-radius: 0 0 30px 30px;
+  transform: translateY(20px);
+  border-bottom: solid 1px var(--white);
+  transition: all .5s ease;
+  z-index: 1;
+}
+#continer-cvEx.cvEx-hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+#continer-cvEx .dwonCv, .explore {
+  display: flex;
+  width: 90px;
+  height: 30px;
+  border-radius: 10px;
+  background: var(--redmaroon);
+  box-shadow: 0 0 10px var(--red);
+  border: solid 1px var(--red);
+  font-size: 10px;
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease;
+}
+#continer-cvEx .dwonCv:hover, .explore:hover {
+  transform: translateY(-8px);
+}
+#continer-cvEx .dwonCv a, .explore a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* CONTAINER MAIN 4 */
+.container-main4 {
+  position: absolute;
+  width: 90%;
+  height: 50vh;
+  background: var(--white);
+  z-index: -1;
+  margin-top: 5%;
+  border-radius: 30px;
+  right: 0;
+}
+.container-main4:before {
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 50vh;
+  background: var(--white);
+  border-radius: 50px 80px 0 30px;
+  left: -30px;
+  top: -15%;
+}
+.container-main4:after {
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 63px;
+  background: var(--black);
+  border-radius: 50px;
+  top: -15.5%;
+  left: 50px;
+}
+.container-main4 .bg2 {
+  position: absolute;
+  width: 250px;
+  height: 65px;
+  background: var(--black);
+  border-radius: 0 50px 50px 0;
+  bottom: -4px;
+}
+.container-main4 .judulServices {
+  position: absolute;
+  color: var(--white);
+  right: 23%;
+  top: -12.5%;
+  z-index: 2;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: 'Alata', Sans-Serif;
+  letter-spacing: 0.1;
+}
+.judulServices i {
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.lorem {
+  position: absolute;
+  margin-top: 100%;
+  color: hotpink;
+}
