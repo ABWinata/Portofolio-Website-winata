@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Style Tanpa Cas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alata&family=Major+Mono+Display&family=Marcellus+SC&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', Sans-Serif, 'Poppins', Sans-Serif;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  text-align: center;
+  }
+  section p, h6 {
+    font-family: 'Poppins', Sans-Serif;
+    font-size: 10px;
+  }
+  section hr {
+    width: 60%;
+    height: 5px;
+    background: darkblue;
+    border-radius: 50px;
+    margin-bottom: 10px;
+  }
+  section .eror {
+    display: flex
+  }
+  .eror h1 {
+    color: darkblue;
+    font-size: 100px;
+  }
+  .eror .one {animation: erOne 1.5s ease-in-out infinite alternate;
+  }@keyframes erOne {
+  0% {transform: translateY(-15) scale(1);}
+  100% {transform: translateY(15px);}
+}
+  .eror .two {animation: erTwo 1.5s ease-in-out infinite alternate;
+  }@keyframes erTwo {
+  0% {transform: translateY(15) scale(1);}
+  100% {transform: translateY(-15px);}
+}
+  .eror .tree {animation: erTree 1.3s ease-in-out infinite alternate;
+  }@keyframes erTree {
+  0% {transform: translateY(-18) scale(1);}
+  100% {transform: translateY(18px);}
+}
+  button {
+  border: none;
+  background: darkblue;
+  border-radius: 10px;
+  width: auto;
+  height: 40px;
+  padding: 5px 10px;
+  }
+  button:hover {
+    background-color: teal;
+    transform: scale(0.95);
+  }
+  button a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Alata', Sans-Serif;
+  }
+    </style>
+</head>
+<body>
+  <section>
+    <div class="eror">
+    <h1 class="one">4</h1>
+    <h1 class="two">0</h1>
+    <h1 class="tree">4</h1>
+    </div>
+    
+    <hr>
+    <p>page not found!
+    <br> Halaman ini belum di kembangkan oleh Winata</p>
+    
+    <button><a href="index.html">Back to Home<i class="ti ti-arrow-back"></i></a></button>
+  </section>
+</body>
+</html>
